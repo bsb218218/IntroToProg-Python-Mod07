@@ -53,18 +53,17 @@ Figure 1. An example code to demonstrate pickling (top and bottom)
 
 Using the code, I collect schedule data (i.e., task and time) from the user and want to save the data into a binary file, not a plain text file. First, the code captures the data from the user and then opens the file using ‘open()’ and ‘ab’. Afterwards, the code stores the data using the pickle.dump method. You can read the data back with the pickle.load method. You first open the file using ‘open()’ and ‘rb’, then you load the data using the pickle.load() method. But note that this code only loads the first row of the data. In order to load all objects from the data, you can use with open() as, the while loop, try-except functions, and the append() as shown in Figure 1. I did my own research in order to find a way to load all data from the file (source: https://stackoverflow.com/questions/49261006/load-all-pickled-objects). When you run the code, the code prompts you to enter a task and a time. I input “doctor’s appointment and 10am” in a row. Then the codes yield the following: 
 
-![output](https://github.com/bsb218218/IntroToProg-Python-Mod07/blob/main/docs/figure%203.png "output")####
+![output](https://github.com/bsb218218/IntroToProg-Python-Mod07/blob/main/docs/figure%202.png "output")  
 Figure 2. Output of the first running of the code
 
 When you run the code one more time, then your data file will have two tasks saved. While pickle.load() would show only the first object, the last part of the code will show you all objects saved in the file (Figure 3). 
 
+![output](https://github.com/bsb218218/IntroToProg-Python-Mod07/blob/main/docs/figure%203.png "output")  
 Figure 3. Output of the second running of the code 
 
 I ran the code in the command shell as well and the same output was resulted in (Figure 4): 
 
-####
-![output](webaddress "output")####  
-
+![output](https://github.com/bsb218218/IntroToProg-Python-Mod07/blob/main/docs/figure%204.png "output")  
 Figure 4. Output in Command Shell 
 
 ## 3. Structured Error Handling 
@@ -96,7 +95,9 @@ except Exception as e:
 Figure 5. Code: Assignment07_SangheeKang_errorhandling1
 The output of the code is shown below (Figure 6). The error type is IndexError and some more information is presented. 
 
-Figure 6. Output of Assignment07_SangheeKang_errorhandling1 
+![output](https://github.com/bsb218218/IntroToProg-Python-Mod07/blob/main/docs/figure%206.png "output")  
+Figure 6. Output of Assignment07_SangheeKang_errorhandling1  
+
 ### 3.2. Catching Specific Exceptions 
 You can also catch a specific error by adding more specific exception classes (but still built-in python errors). In Figure 7, I have the same lstData and the try-except function. But this time, I used a specific error type “IndexError” in the except part (except IndexError as e: ). In the case when a non-specific error occurs, I put “except Exception as e: ” as well. Figure 8 shows the result of the code. 
 
@@ -123,6 +124,7 @@ except Exception as e:
 ```
 Figure 7. Code: Assignment07_SangheeKang_errorhandling2
 
+![output](https://github.com/bsb218218/IntroToProg-Python-Mod07/blob/main/docs/figure%208.png "output")  
 Figure 8. Output of Assignment07_SangheeKang_errorhandling2
 
 ### 3.3. Raising Custom Errors
@@ -151,6 +153,7 @@ except Exception as e:
 ```
 Figure 9. Code: Assignment07_SangheeKang_errorhandling3
 
+![output](https://github.com/bsb218218/IntroToProg-Python-Mod07/blob/main/docs/figure%2010.png "output")  
 Figure 10. Output of Assignment07_SangheeKang_errorhandling3
 
 ### 3.4. Creating Custom Exception Classes
@@ -190,9 +193,14 @@ except Exception as e:
 ```
 Figure 11. Code: Assignment07_SangheeKang_errorhandling4
 
+![output](https://github.com/bsb218218/IntroToProg-Python-Mod07/blob/main/docs/figure%2012.png "output")  
 Figure 12. Output of Assignment07_SangheeKang_errorhandling4
 I ran the four codes in the command shell as well and obtained the same results from Pycharm:
 
+![output](https://github.com/bsb218218/IntroToProg-Python-Mod07/blob/main/docs/figure%2013_1.png "output")  
+![output](https://github.com/bsb218218/IntroToProg-Python-Mod07/blob/main/docs/figure%2013_2.png "output")  
+![output](https://github.com/bsb218218/IntroToProg-Python-Mod07/blob/main/docs/figure%2013_3.png "output")  
+![output](https://github.com/bsb218218/IntroToProg-Python-Mod07/blob/main/docs/figure%2013_4.png "output")  
 Figure 13. Output from the Command shell
 
 ## 3. Summary 
