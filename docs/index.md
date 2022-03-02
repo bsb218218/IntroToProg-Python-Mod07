@@ -62,6 +62,7 @@ Figure 3. Output of the second running of the code
 
 I ran the code in the command shell as well and the same output was resulted in (Figure 4): 
 
+![output](webaddress "output")####
 Figure 4. Output in Command Shell 
 
 ## 3. Structured Error Handling 
