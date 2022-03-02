@@ -53,6 +53,7 @@ Figure 1. An example code to demonstrate pickling (top and bottom)
 
 Using the code, I collect schedule data (i.e., task and time) from the user and want to save the data into a binary file, not a plain text file. First, the code captures the data from the user and then opens the file using ‘open()’ and ‘ab’. Afterwards, the code stores the data using the pickle.dump method. You can read the data back with the pickle.load method. You first open the file using ‘open()’ and ‘rb’, then you load the data using the pickle.load() method. But note that this code only loads the first row of the data. In order to load all objects from the data, you can use with open() as, the while loop, try-except functions, and the append() as shown in Figure 1. I did my own research in order to find a way to load all data from the file (source: https://stackoverflow.com/questions/49261006/load-all-pickled-objects). When you run the code, the code prompts you to enter a task and a time. I input “doctor’s appointment and 10am” in a row. Then the codes yield the following: 
 
+![output](webaddress "output")####
 Figure 2. Output of the first running of the code
 
 When you run the code one more time, then your data file will have two tasks saved. While pickle.load() would show only the first object, the last part of the code will show you all objects saved in the file (Figure 3). 
